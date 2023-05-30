@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  /* COLORS */
+  --clr-cyan: hsl(185, 75%, 39%);
+  --clr-dark-blue: hsl(229, 23%, 23%);
+  --clr-blue: hsl(227, 10%, 46%);
+  --clr-gray: hsl(0, 0%, 59%);
+
+  /* FONTS */
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: var(--clr-dark-blue-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/*************************/
+/* General Styling */
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-cyan);
+
+  /* Stops background images from overflowing */
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 2rem;
+}
+
+.bg-img-1 {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  top: -30rem;
+  left: -20rem;
+}
+
+.bg-img-2 {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  bottom: -50rem;
+  right: 0rem;
+}
+
+.card__pfp {
+  width: 35%;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  /* transform: translateY(-5rem); */
+  margin-top: -5rem;
+}
+
+.card__name {
+  font-size: 1.8rem;
+}
+
+.card__age {
+  font-size: 1.8rem;
+  color: var(--clr-gray);
+}
+
+.card__location {
+  font-size: 1.4rem;
+  color: var(--clr-gray);
+}
+
+.card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 1rem;
+
+  min-width: 100%;
+  padding: 2rem 0;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.452);
+}
+
+.card__stats-num {
+  font-size: 1.8rem;
+}
+
+.card__stats-title {
+  font-size: 1.1rem;
+  color: var(--clr-gray)
+}
+
+/*************************/
+/* Helper Classes */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
